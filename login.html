@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="full_page">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_page</title>
+    
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #68a7299f;
+    background-size: cover;
+    
+}
+
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    align-items: center;
+    margin-left: 40%;
+}
+
+.box input[type="text"], .box input[type="email"]
+{
+border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 3px solid #0367fd;
+padding: 14px 10px;
+width: 240px;
+outline: none;
+color: white;
+border-radius: 24px;
+transition: 0.25px;
+
+}
+
+.box input[type="text"], .box input[type="password"]
+{
+border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 3px solid #0367fd;
+padding: 14px 10px;
+width: 240px;
+outline: none;
+color: white;
+border-radius: 24px;
+transition: 0.25px;
+
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+
+    width: 270px;
+    border-color: #ffc400ec;
+}
+
+.box input[type="submit"]{
+border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 3px solid #ffc400ec;
+padding: 14px 10px;
+width: 120px;
+outline: none;
+color: white;
+border-radius: 24px;
+transition: 0.25px;
+cursor: pointer;
+
+}
+
+.box input[type="submit"]:hover{
+background: #ffc400ec;
+
+}
+
+.choosetype{
+    border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 3px solid #0367fd;
+padding: 14px 10px;
+width: 260px;
+outline: none;
+color: white;
+border-radius: 24px;
+transition: 0.25px;
+
+}
+
+#outer_box{
+    width: 500px;
+    height: 400px;
+    background-color: rgb(47, 56, 56);
+    margin: auto;
+    border-radius: 10%;
+    
+    
+
+}
+    </style>
+    
+
+</head>
+<body>
+
+    <div id="outer_box">
+    <form class="box" onsubmit="validate(event)" >
+
+<h1>Login !</h1>
+
+    
+    
+    <input type="email" id="username"  placeholder="Enter user email">
+
+    
+    <input type="password" id="pass"  placeholder="Enter password">
+
+    <select id="usertype"  class="choosetype">
+        <option value="admin">Admin</option>
+        <option value="client">Client</option>
+
+    </select>
+
+    <input type="submit" name="Login" value="login"  />
+
+        
+    </form>
+
+</div>
+
+
+<script>
+    
+        function validate(event) {
+
+    event.preventDefault(); // Prevent the form from being submitted
+
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("pass").value;
+    var usertype = document.getElementById("usertype").value;
+
+    window.location.href = "index.html";
+
+    // if(username == "admin" && password == "admin123" && usertype == "admin") {
+    //     window.location.href = "index.html";
+    // } else if(username == "client" && password == "client123" && usertype == "client") {
+    //     window.location.href = "index.html";
+    // } else {
+    //     alert("You have entered the wrong username and/or password");
+    // }
+}
+
+</script>
+
+</body>
+</html>
